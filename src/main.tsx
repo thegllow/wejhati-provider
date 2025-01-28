@@ -7,13 +7,16 @@ import { BrowserRouter } from "react-router"
 import "./lib/i18n/index.ts"
 import Providers from "./lib/mantine/providers.tsx"
 import MyQueryClientProvider from "./lib/react-query/index.tsx"
+import { NuqsAdapter } from "nuqs/adapters/react-router/v7"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Providers>
         <MyQueryClientProvider>
-          <App />
+          <NuqsAdapter>
+            <App />
+          </NuqsAdapter>
         </MyQueryClientProvider>
       </Providers>
     </BrowserRouter>

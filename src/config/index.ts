@@ -1,1 +1,3 @@
 export const LOCALES = ["ar", "en"]
+export const LOCALSTORAGE_SESSION_KEY = "wejhati-session"
+export const USER_URL = "https://localhost:3000"

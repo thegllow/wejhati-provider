@@ -16,6 +16,7 @@ import {
   TextInput,
 } from "@mantine/core"
 import { Calendar } from "@mantine/dates"
+import { IconTriangleInvertedFilled } from "@tabler/icons-react"
 
 const primary = [
   "#fff7e1",
@@ -63,7 +64,7 @@ export const theme = createTheme({
     gray,
   },
 
-  fontFamily: "MyCustomFont, san-serf",
+  fontFamily: "Inter, serf",
   fontFamilyMonospace: "Monaco, Courier, monospace",
   primaryColor: "primary",
   radius: {
@@ -112,75 +113,39 @@ export const theme = createTheme({
     Input: Input.extend({
       defaultProps: {
         size: "md",
+        fw: 600,
+        c: "primary",
         classNames: {
           input: '[type="tel"]:!text-left',
         },
-        styles(_, props) {
-          const isFilled = props.variant === "filled"
-          if (isFilled)
-            return {
-              input: {
-                border: `1px solid var(--mantine-color-gray-4)`,
-                background: `#f6f6f6`,
-              },
-            }
-
-          return {}
-        },
       },
     }),
+
     Select: Select.extend({
       defaultProps: {
         size: "md",
+        fw: 600,
+        rightSection: <IconTriangleInvertedFilled z={-1} size={12} color={primary[7]} />,
 
-        styles(_, props) {
-          const isFilled = props.variant === "filled"
-          if (isFilled)
-            return {
-              input: {
-                border: `1px solid var(--mantine-color-gray-4)`,
-                background: `#f6f6f6`,
-              },
-            }
-
-          return {}
+        styles(theme, props, ctx) {
+          return {
+            input: {
+              color: theme.colors.primary[7],
+            },
+          }
         },
       },
     }),
+
     TextInput: TextInput.extend({
       defaultProps: {
         size: "md",
       },
     }),
-    PasswordInput: PasswordInput.extend({
-      defaultProps: {
-        size: "md",
 
-        styles(_theme, props) {
-          const isFilled = props.variant === "filled"
-          if (isFilled)
-            return {
-              input: {
-                border: `1px solid var(--mantine-color-gray-4)`,
-                background: `#f6f6f6`,
-              },
-            }
-
-          return {}
-        },
-      },
-    }),
-    InputWrapper: InputWrapper.extend({
-      styles: {
-        label: {
-          fontWeight: 400,
-          marginBottom: "6px",
-        },
-      },
-    }),
     Button: Button.extend({
       defaultProps: {
-        fw: 400,
+        fw: 600,
         size: "md",
       },
     }),

@@ -1,23 +1,45 @@
 import React from "react"
-import { Icon, IconHomeFilled, IconProps } from "@tabler/icons-react"
-import { LucideProps } from "lucide-react"
+import {
+  Icon,
+  IconChartBar,
+  IconFileDescription,
+  IconHomeFilled,
+  IconMap,
+  IconProps,
+} from "@tabler/icons-react"
+import { BusFront, LucideProps } from "lucide-react"
 
 export type NavItemType = {
-    label: string
-    icon:
+  label: string
+  icon:
     | React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>
     | React.ForwardRefExoticComponent<IconProps & React.RefAttributes<Icon>>
-    link: string | { label: string; link: string }[]
+  link: string | { label: string; link: string }[]
 }
 export const providerNavbarItems: NavItemType[] = [
-    {
-        label: "home",
-        link: "/provider",
-        icon: IconHomeFilled,
-    },
-    {
-        label: "home2",
-        link: "/provider2",
-        icon: IconHomeFilled,
-    },
+  {
+    label: "home",
+    link: "/provider",
+    icon: IconHomeFilled,
+  },
+  {
+    label: "bus-fleet",
+    link: "/provider/bus-fleet",
+    icon: BusFront,
+  },
+  {
+    label: "trip-management",
+    link: "/provider/trip-management",
+    icon: IconMap,
+  },
+  {
+    label: "financial-management",
+    link: "/provider/financial",
+    icon: IconChartBar,
+  },
+  {
+    label: "reports",
+    link: "/provider/reports",
+    icon: IconFileDescription,
+  },
 ]

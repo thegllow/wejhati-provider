@@ -69,7 +69,7 @@ export const theme = createTheme({
   primaryColor: "primary",
   radius: {
     sm: "0.35rem",
-    md: "0.75rem",
+    md: "0.65rem",
     lg: "1rem",
     xl: "2rem",
   },
@@ -127,7 +127,7 @@ export const theme = createTheme({
         fw: 600,
         rightSection: <IconTriangleInvertedFilled z={-1} size={12} color={primary[7]} />,
 
-        styles(theme, props, ctx) {
+        styles(theme) {
           return {
             input: {
               color: theme.colors.primary[7],

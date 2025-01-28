@@ -1,3 +1,15 @@
 {
-  "title": "this is a title"
+  "general": {
+    "copied": "Copied",
+    "id": "ID"
+  },
+  "nav": {
+    "items": {
+      "home": "Booking Management",
+      "bus-fleet": "Bus Fleet",
+      "trip-management": "Trip Management",
+      "financial-management": "Financial Management",
+      "reports": "Reports"
+    }
+  }
 }

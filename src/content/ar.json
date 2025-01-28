@@ -1,3 +1,15 @@
 {
-  "title": "عنوان"
+  "general": {
+    "copied": "تم النسخ",
+    "id": "المعرف"
+  },
+  "nav": {
+    "items": {
+      "home": "إدارة الحجوزات",
+      "bus-fleet": "أسطول الحافلات",
+      "trip-management": "الرحلات",
+      "financial-management": "الإدارة المالية",
+      "reports": "التقارير"
+    }
+  }
 }

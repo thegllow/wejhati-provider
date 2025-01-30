@@ -3,16 +3,17 @@ import { SuccessResponse } from "@/@types"
 import { User } from "@/@types/user"
 import { LOCALSTORAGE_SESSION_KEY } from "@/config"
 import WejhatiAPI from "@/services"
+import { useAppStore } from "@/store"
 import { isAuthenticated } from "@/utils/is-authenticated"
 import { AppShell, useMantineColorScheme, useMantineTheme } from "@mantine/core"
-import { useLocalStorage } from "@mantine/hooks"
+import { useLocalStorage, useToggle } from "@mantine/hooks"
 import { useQuery } from "@tanstack/react-query"
 import { Outlet } from "react-router"
 
+import { providerNavbarItems } from "@/config/site"
 import { useNavigate, usePathname } from "@/lib/i18n/navigation"
 import Header from "@/components/common/header"
 import Navbar from "@/components/common/navbar"
-import { providerNavbarItems } from "@/config/site"
 
 export default function ProviderDashboardLayout() {
   // const pathName = usePathname()
@@ -41,6 +42,9 @@ export default function ProviderDashboardLayout() {
     staleTime: Infinity,
   })
 
+  // toggle sidebar
+  const value = useAppStore((state) => state.navIsOpened)
+
   return (
     <AppShell
       className="bg-[#f9f8f6]"
@@ -52,11 +56,10 @@ export default function ProviderDashboardLayout() {
       layout={"alt"}
       header={{ height: 58 }}
       navbar={{
-
-        width: 270,
-        breakpoint: "xs"
+        width: value ? 90 : 270,
+        breakpoint: 0,
       }}
-      padding="lg">
+      padding="xl">
       <Header />
       <Navbar navItems={providerNavbarItems} />
       <AppShell.Main>

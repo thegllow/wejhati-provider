@@ -1,8 +1,13 @@
 {
   "general": {
     "copied": "تم النسخ",
-    "id": "المعرف"
+    "id": "المعرف",
+    "search": "ابحث هنا"
   },
+  "header":{
+    "add-reservation":"حجز جديد"
+  },
+
   "nav": {
     "items": {
       "home": "إدارة الحجوزات",

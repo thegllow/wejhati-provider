@@ -113,7 +113,7 @@ export const theme = createTheme({
     Input: Input.extend({
       defaultProps: {
         size: "md",
-        fw: 600,
+        fw: 500,
         c: "primary",
         classNames: {
           input: '[type="tel"]:!text-left',
@@ -124,7 +124,7 @@ export const theme = createTheme({
     Select: Select.extend({
       defaultProps: {
         size: "md",
-        fw: 600,
+        fw: 500,
         rightSection: <IconTriangleInvertedFilled z={-1} size={12} color={primary[7]} />,
 
         styles(theme) {
@@ -145,7 +145,7 @@ export const theme = createTheme({
 
     Button: Button.extend({
       defaultProps: {
-        fw: 600,
+        fw: 500,
         size: "md",
       },
     }),

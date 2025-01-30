@@ -1,7 +1,11 @@
 {
   "general": {
     "copied": "Copied",
-    "id": "ID"
+    "id": "ID",
+    "search": "Search"
+  },
+  "header":{
+    "add-reservation":"Add Reservation"
   },
   "nav": {
     "items": {

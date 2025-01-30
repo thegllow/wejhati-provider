@@ -1,4 +1,6 @@
-import { AppShell, Group, Select, Title } from "@mantine/core"
+import { AppShell, Button, Group, Input, Select, Title } from "@mantine/core"
+import { IconSearch } from "@tabler/icons-react"
+import { Plus } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router"
 
@@ -20,12 +22,19 @@ const Header = () => {
   }
 
   return (
-    <AppShell.Header withBorder={false}>
+    <AppShell.Header withBorder={false} p="lg">
       <Group justify="space-between" h="100%" px="md" wrap="nowrap">
         <Title order={3}>this is a title</Title>
         <Group wrap="nowrap" align="center">
+          <Button variant="outline" leftSection={<Plus />}>
+          {t('header.add-reservation')}
+          </Button>
+          <Input
+            placeholder={t("general.search")}
+            classNames={{ input: "placeholder:!text-[var(--mantine-color-primary-7)]" }}
+            leftSection={<IconSearch color="var(--mantine-color-primary-7)" />}
+          />
           <Select
-            size="sm"
             defaultValue={lang}
             allowDeselect={false}
             onChange={handleChangeLanguage}

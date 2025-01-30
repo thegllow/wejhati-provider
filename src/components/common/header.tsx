@@ -7,7 +7,7 @@ import { usePathname } from "@/lib/i18n/navigation"
 import UserNotifications from "./user-notifications"
 
 const Header = () => {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const lang = i18n.language
   const navigate = useNavigate()
   const pathname = usePathname()

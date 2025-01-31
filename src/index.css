@@ -1,1 +1,35 @@
 @import "tailwindcss";
+/* @font-face {
+  font-family: "arabicFont";
+  src: url("./assets/font/SF-Pro-Text-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "arabicFont";
+  src: url("./assets/font/SF-Pro-Text-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "arabicFont";
+  src: url("./assets/font/SF-Pro-Text-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "arabicFont";
+  src: url("./assets/font/SF-Pro-Text-Semibold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "arabicFont";
+  src: url("./assets/font/SF-Pro-Text-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  --font-arabic: arabicFont, serf;
+} */

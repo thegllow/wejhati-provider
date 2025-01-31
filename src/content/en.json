@@ -2,10 +2,12 @@
   "general": {
     "copied": "Copied",
     "id": "ID",
-    "search": "Search"
+    "search": "Search",
+    "date-range-input-placeholder": "Choose Dates",
+    "date": "date"
   },
-  "header":{
-    "add-reservation":"Add Reservation"
+  "header": {
+    "add-reservation": "Add Reservation"
   },
   "nav": {
     "items": {
@@ -14,6 +16,12 @@
       "trip-management": "Trip Management",
       "financial-management": "Financial Management",
       "reports": "Reports"
+    }
+  },
+  "home": {
+    "passengers-graph": {
+      "title": "Passengers",
+      "y-axis-label": "Number of Passengers"
     }
   }
 }

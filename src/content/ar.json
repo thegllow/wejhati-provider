@@ -2,10 +2,12 @@
   "general": {
     "copied": "تم النسخ",
     "id": "المعرف",
-    "search": "ابحث هنا"
+    "search": "ابحث هنا",
+    "date-range-input-placeholder": "اختر فترة زمنية",
+    "date": "تاريخ"
   },
-  "header":{
-    "add-reservation":"حجز جديد"
+  "header": {
+    "add-reservation": "حجز جديد"
   },
 
   "nav": {
@@ -15,6 +17,12 @@
       "trip-management": "الرحلات",
       "financial-management": "الإدارة المالية",
       "reports": "التقارير"
+    }
+  },
+  "home": {
+    "passengers-graph": {
+      "title": "الركاب",
+      "y-axis-label": "عدد الركاب"
     }
   }
 }

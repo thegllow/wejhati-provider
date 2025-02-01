@@ -7,17 +7,22 @@ import { useNavigate } from "react-router"
 import { usePathname } from "@/lib/i18n/navigation"
 
 import UserNotifications from "./user-notifications"
+import { useOptimisticSearchParams } from "nuqs/adapters/react-router/v7"
 
 const Header = () => {
   const { i18n, t } = useTranslation()
   const lang = i18n.language
   const navigate = useNavigate()
   const pathname = usePathname()
+
+  // Note: this is read-only, but reactive to all URL changes
+  const searchParams = useOptimisticSearchParams()
+  console.log("🚀 ~ Header ~ searchParams:", searchParams)
   const handleChangeLanguage = (value: string | null) => {
     if (!value) return
 
     i18n.changeLanguage(value, () => {
-      navigate(`/${value}${pathname}`)
+      navigate(`/${value}${pathname}?${searchParams.toString()}`)
     })
   }
 
@@ -27,7 +32,7 @@ const Header = () => {
         <Title order={3}>this is a title</Title>
         <Group wrap="nowrap" align="center">
           <Button variant="outline" leftSection={<Plus />}>
-          {t('header.add-reservation')}
+            {t('header.add-reservation')}
           </Button>
           <Input
             placeholder={t("general.search")}

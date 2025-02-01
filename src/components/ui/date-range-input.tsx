@@ -20,6 +20,7 @@ const DateRangeInput = ({ queryKey, ...props }: Props) => {
       if (!value || !value[0] || !value[1]) return ""
       return `${dayjs(value[0]).format("YYYY-MM-DD")}_${dayjs(value[1]).format("YYYY-MM-DD")}`
     },
+
   })
   const { t } = useTranslation()
   return (
@@ -29,6 +30,7 @@ const DateRangeInput = ({ queryKey, ...props }: Props) => {
       maw={260}
       w={'100%'}
       size="md"
+      valueFormat="MMM D, YYYY"
       placeholder={t("general.date-range-input-placeholder")}
       rightSection={<Calendar className="size-5" />}
       value={range}

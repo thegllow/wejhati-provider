@@ -54,7 +54,7 @@ export default function ProviderDashboardLayout() {
         },
       }}
       layout={"alt"}
-      header={{ height: 58 }}
+      header={{ height: 72 }}
       navbar={{
         width: value ? 90 : 270,
         breakpoint: 0,

@@ -79,12 +79,13 @@ export const theme = createTheme({
       defaultProps: {
         color: "primary",
         highlightOnHover: true,
-        verticalSpacing: "sm",
+        verticalSpacing: "md",
+        borderColor:"#EAECF0"
       },
     }),
     TableThead: TableThead.extend({
       defaultProps: {
-        bg: "gray.1",
+        bg: "#FFF9F0",
       },
     }),
     TableTh: TableTh.extend({
@@ -94,15 +95,19 @@ export const theme = createTheme({
     }),
     TableTd: TableTd.extend({
       defaultProps: {
-        c: "gray",
+        c: "#747474",
       },
     }),
     Badge: Badge.extend({
       defaultProps: {
         size: "lg",
         radius: "xl",
-        variant: "light",
         fw: 600,
+        variant:'light',
+        style:{
+          textTransform:'capitalize'
+        }
+        
       },
     }),
     Menu: Menu.extend({

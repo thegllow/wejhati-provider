@@ -10,7 +10,12 @@ const PaginationCom = ({ last_page }: Props) => {
   if (!last_page) return null
   return last_page > 1 ? (
     <Group justify="center" py={"lg"}>
-      <Pagination radius={"sm"} color="gray" variant="" onChange={setPage} value={page} total={last_page} />
+      <Pagination radius={"8px"} styles={{
+        control:{
+          fontSize:"14px",
+          fontWeight:500
+        }
+      }} color="primary" variant="" onChange={setPage} value={page} total={last_page} />
     </Group>
   ) : null
 }

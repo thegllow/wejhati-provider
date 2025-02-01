@@ -85,7 +85,7 @@ const UserNotifications = () => {
         <Popover.Target>
           <Indicator disabled={!hasNewNotification} color="red">
             <ActionIcon onClick={open} variant="white" color="gray">
-              <Bell size={20} />
+              <Bell size={22} />
             </ActionIcon>
           </Indicator>
         </Popover.Target>

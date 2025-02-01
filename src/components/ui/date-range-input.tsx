@@ -9,7 +9,7 @@ type Props = {
 
 const DateRangeInput = ({ queryKey, ...props }: Props) => {
   // Use Nuqs to sync state with URL
-  const [range, setRange] = useQueryState<DatesRangeValue>(queryKey || "date-ange", {
+  const [range, setRange] = useQueryState<DatesRangeValue>(queryKey || "date-range", {
     defaultValue: [null, null], // Default empty range  
     parse: (value) => {
       if (!value) return [null, null] as const
@@ -36,7 +36,8 @@ const DateRangeInput = ({ queryKey, ...props }: Props) => {
       value={range}
       onChange={setRange}
       classNames={{
-        input: '!text-[var(--mantine-color-primary-7)]'
+        input: '!text-[var(--mantine-color-primary-7)] ',
+        placeholder: '!text-[var(--mantine-color-primary-7)]'
       }}
       {...props}
     />

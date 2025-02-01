@@ -7,7 +7,11 @@
     "date": "تاريخ"
   },
   "header": {
-    "add-reservation": "حجز جديد"
+    "add-reservation": "حجز جديد",
+    "user-button": {
+      "edit": "تحرير",
+      "logout": "تسجيل الخروج"
+    }
   },
 
   "nav": {

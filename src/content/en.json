@@ -7,7 +7,11 @@
     "date": "date"
   },
   "header": {
-    "add-reservation": "Add Reservation"
+    "add-reservation": "Add Reservation",
+    "user-button": {
+      "edit": "Edit",
+      "logout": "Logout"
+    }
   },
   "nav": {
     "items": {

@@ -3,6 +3,7 @@ import { IconSearch } from "@tabler/icons-react"
 import { Plus } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router"
+import UserButton from './user-button'
 
 import { usePathname } from "@/lib/i18n/navigation"
 
@@ -29,7 +30,7 @@ const Header = () => {
   return (
     <AppShell.Header withBorder={false} p="lg">
       <Group justify="space-between" h="100%" px="md" wrap="nowrap">
-        <Title order={3}>this is a title</Title>
+        <Title order={3} fw={'700'}>this is a title</Title>
         <Group wrap="nowrap" align="center">
           <Button variant="outline" leftSection={<Plus />}>
             {t('header.add-reservation')}
@@ -56,6 +57,7 @@ const Header = () => {
             ]}
           />
           <UserNotifications />
+          <UserButton />
         </Group>
       </Group>
     </AppShell.Header>

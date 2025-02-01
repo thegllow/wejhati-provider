@@ -35,7 +35,7 @@ const Home = (props: Props) => {
   const { t } = useTranslation()
 
   return (
-    <Stack>
+    <Stack >
       <Paper component={Stack} gap={"lg"} p="lg" className="grow" radius="md">
         <Group justify="space-between" py="xs">
           <Text size="lg" fw={600}>

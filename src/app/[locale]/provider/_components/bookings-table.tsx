@@ -1,5 +1,6 @@
 import { TableSuccessResponse } from "@/@types"
-import { Badge, Table, TableTh, TableTr } from "@mantine/core"
+import { Badge, Group, Space, Stack, Table, TableTh, TableTr, Text } from "@mantine/core"
+import { useTranslation } from "react-i18next"
 
 import TableWrapper from "@/components/table/table-wrapper"
 
@@ -95,48 +96,60 @@ const queryFn = async (
 }
 
 const BookingTable = (props: Props) => {
+  const { t } = useTranslation()
   return (
-    <TableWrapper
-      queryFun={queryFn}
-      queryKey={["test"]}
-      miw={1200}
-      headKey={[
-        "bookingNo",
-        "busNo",
-        "noOfSeats",
-        "noOfPassengers",
-        "tripType",
-        "departure",
-        "arrival",
-        "date",
-        "tripTime",
-        "bookingValue",
-      ]}
-      renderHead={(headerKey, data) => {
-        return [...headerKey, "action"].map((k) => <TableTh key={k}>{k}</TableTh>)
-      }}
-      renderRow={(data) => {
-        return data.map((element) => {
-          return (
-            <TableTr key={element.bookingNo}>
-              <Table.Td>{element.bookingNo}</Table.Td>
-              <Table.Td>{element.busNo}</Table.Td>
-              <Table.Td>{element.noOfSeats}</Table.Td>
-              <Table.Td>{element.noOfPassengers}</Table.Td>
-              <Table.Td>{element.tripType}</Table.Td>
-              <Table.Td>{element.departure}</Table.Td>
-              <Table.Td>{element.arrival}</Table.Td>
-              <Table.Td>{element.date}</Table.Td>
-              <Table.Td>{element.tripTime}</Table.Td>
-              <Table.Td>{element.bookingValue}</Table.Td>
-              <Table.Td>
-                <Badge>more</Badge>
-              </Table.Td>
-            </TableTr>
-          )
-        })
-      }}
-    />
+    <Stack>
+      <Space/>
+      <Group>
+        <Text size="sm" c={'text'}>{t("home.passengers-table.title")}</Text>
+
+      </Group>
+      <TableWrapper
+        queryFun={queryFn}
+        queryKey={["test"]}
+        miw={1200}
+        headKey={[
+          "bookingNo",
+          "busNo",
+          "noOfSeats",
+          "noOfPassengers",
+          "tripType",
+          "departure",
+          "arrival",
+          "date",
+          "tripTime",
+          "bookingValue",
+        ]}
+        renderHead={(headerKey, data) => {
+          return [...headerKey, "action"].map((k) => <TableTh key={k}>{k}</TableTh>)
+        }}
+        renderRow={(data) => {
+          return data.map((element) => {
+            return (
+              <TableTr key={element.bookingNo}>
+                <Table.Td>{element.bookingNo}</Table.Td>
+                <Table.Td>{element.busNo}</Table.Td>
+                <Table.Td>{element.noOfSeats}</Table.Td>
+                <Table.Td>{element.noOfPassengers}</Table.Td>
+                <Table.Td>
+                  <Badge color={element.tripType == "Round" ? "#7143B4" : "#129494"}>
+                    {element.tripType}
+                  </Badge>{" "}
+                </Table.Td>
+                <Table.Td>{element.departure}</Table.Td>
+                <Table.Td>{element.arrival}</Table.Td>
+                <Table.Td>{element.date}</Table.Td>
+                <Table.Td>{element.tripTime}</Table.Td>
+                <Table.Td>{element.bookingValue}</Table.Td>
+                <Table.Td>
+                  <Badge>more</Badge>
+                </Table.Td>
+              </TableTr>
+            )
+          })
+        }}
+      />
+    </Stack>
   )
 }
 

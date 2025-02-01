@@ -55,6 +55,22 @@ const gray = [
   "#575757",
 ] as const
 
+
+const text = 
+  [
+    "#faf4ec",
+    "#eae7e3",
+    "#d0cecb",
+    "#b5b3af",
+    "#9e9c97",
+    "#908d88",
+    "#8a867f",
+    "#77736b",
+    "#6b665d",
+    "#5e574b"
+  ] as const
+
+
 export const theme = createTheme({
   black: "#151C28",
 
@@ -62,6 +78,7 @@ export const theme = createTheme({
     primary,
     secondary,
     gray,
+    text
   },
 
   fontFamily: "Inter, serf",

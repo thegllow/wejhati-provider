@@ -27,14 +27,17 @@ const DateRangeInput = ({ queryKey, ...props }: Props) => {
     <DatePickerInput
       className="grow shrink-0"
       type="range"
-      maw={260}
+      maw={270}
       w={'100%'}
       size="md"
       valueFormat="MMM D, YYYY"
       placeholder={t("general.date-range-input-placeholder")}
-      rightSection={<Calendar className="size-5" />}
+      rightSection={<Calendar className="size-5 !text-[var(--mantine-color-primary-7)]" />}
       value={range}
       onChange={setRange}
+      classNames={{
+        input: '!text-[var(--mantine-color-primary-7)]'
+      }}
       {...props}
     />
   )

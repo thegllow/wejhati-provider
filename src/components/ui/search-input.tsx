@@ -26,7 +26,7 @@ const SearchInput = ({ key, ...props }: Props) => {
     <TextInput
       maw={240}
       size="sm"
-      placeholder={t("global.search")}
+      placeholder={t("general.search")}
       leftSection={<Search className="size-5" />}
       value={state}
       onChange={handleChange}

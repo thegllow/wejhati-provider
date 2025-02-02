@@ -31,5 +31,9 @@
     "passengers-table": {
       "title": "بيانات الركاب"
     }
+  },
+
+  "notifications": {
+    "title": "الاشعارات"
   }
 }

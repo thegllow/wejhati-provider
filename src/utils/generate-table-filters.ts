@@ -1,4 +1,4 @@
-import { objectToSearchParams } from "./obj-to-searchparams"
+import { objectToSearchParams } from "./obj-to-searchParams"
 
 type generateTableFiltersReturnType = {
   searchParams: URLSearchParams

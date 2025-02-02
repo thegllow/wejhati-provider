@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next"
 
 import TableWrapper from "@/components/table/table-wrapper"
 
-type Props = {}
 const tableData = [
   {
     bookingNo: "BK001",
@@ -81,7 +80,7 @@ const tableData = [
 ]
 
 const queryFn = async (
-  q: URLSearchParams,
+  _q: URLSearchParams,
 ): Promise<TableSuccessResponse<(typeof tableData)[number]>["data"]> => {
   await new Promise((res) => setTimeout(res, 2000))
   return {
@@ -95,7 +94,7 @@ const queryFn = async (
   }
 }
 
-const BookingTable = (props: Props) => {
+const BookingTable = () => {
   const { t } = useTranslation()
   return (
     <Stack>
@@ -121,7 +120,7 @@ const BookingTable = (props: Props) => {
           "tripTime",
           "bookingValue",
         ]}
-        renderHead={(headerKey, data) => {
+        renderHead={(headerKey) => {
           return [...headerKey, "action"].map((k) => <TableTh key={k}>{k}</TableTh>)
         }}
         renderRow={(data) => {

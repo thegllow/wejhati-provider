@@ -1,4 +1,4 @@
-const objectToSearchParams = (obj: Record<string, any>) => {
+export const objectToSearchParams = (obj: Record<string, any>) => {
   const params = new URLSearchParams()
   Object.entries(obj).forEach(([key, value]) => {
     if (typeof value === "object") {

@@ -27,8 +27,11 @@
       "title": "Passengers",
       "y-axis-label": "Number of Passengers"
     },
-    "passengers-table":{
-      "title":"Passenger Data"
+    "passengers-table": {
+      "title": "Passenger Data"
     }
+  },
+  "notifications": {
+    "title": "Notifications"
   }
 }

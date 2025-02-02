@@ -5,7 +5,6 @@ import { Divider, Group, Paper, Stack, Text } from "@mantine/core"
 import { useTranslation } from "react-i18next"
 
 import DateRangeInput from "@/components/ui/date-range-input"
-import TableWrapper from "@/components/table/table-wrapper"
 
 import BookingTable from "./_components/bookings-table"
 
@@ -29,9 +28,8 @@ const dummyData = [
   { x: "2023-05-12", y: 178 },
 ]
 
-type Props = {}
 
-const Home = (props: Props) => {
+const Home = () => {
   const { t } = useTranslation()
 
   return (

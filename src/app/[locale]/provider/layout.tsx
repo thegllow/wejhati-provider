@@ -1,19 +1,16 @@
-import { useLayoutEffect } from "react"
 import { SuccessResponse } from "@/@types"
 import { User } from "@/@types/user"
 import { LOCALSTORAGE_SESSION_KEY } from "@/config"
 import WejhatiAPI from "@/services"
 import { useAppStore } from "@/store"
-import { isAuthenticated } from "@/utils/is-authenticated"
-import { AppShell, useMantineColorScheme, useMantineTheme } from "@mantine/core"
-import { useLocalStorage, useToggle } from "@mantine/hooks"
+import { AppShell } from "@mantine/core"
+import { useLocalStorage } from "@mantine/hooks"
 import { useQuery } from "@tanstack/react-query"
 import { Outlet } from "react-router"
 
-import { providerNavbarItems } from "@/config/site"
-import { useNavigate, usePathname } from "@/lib/i18n/navigation"
 import Header from "@/components/common/header"
 import Navbar from "@/components/common/navbar"
+import { providerNavbarItems } from "@/config/site"
 
 export default function ProviderDashboardLayout() {
   // const pathName = usePathname()

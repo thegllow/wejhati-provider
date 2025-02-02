@@ -26,6 +26,9 @@
     "passengers-graph": {
       "title": "Passengers",
       "y-axis-label": "Number of Passengers"
+    },
+    "passengers-table":{
+      "title":"Passenger Data"
     }
   }
 }

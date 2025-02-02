@@ -99,10 +99,11 @@ const BookingTable = (props: Props) => {
   const { t } = useTranslation()
   return (
     <Stack>
-      <Space/>
+      <Space />
       <Group>
-        <Text size="sm" c={'text'}>{t("home.passengers-table.title")}</Text>
-
+        <Text size="sm" c={"text"}>
+          {t("home.passengers-table.title")}
+        </Text>
       </Group>
       <TableWrapper
         queryFun={queryFn}

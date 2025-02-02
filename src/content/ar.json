@@ -27,6 +27,9 @@
     "passengers-graph": {
       "title": "الركاب",
       "y-axis-label": "عدد الركاب"
+    },
+    "passengers-table": {
+      "title": "بيانات الركاب"
     }
   }
 }

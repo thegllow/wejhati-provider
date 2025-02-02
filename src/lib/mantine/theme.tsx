@@ -3,9 +3,7 @@ import {
   Button,
   createTheme,
   Input,
-  InputWrapper,
   Menu,
-  PasswordInput,
   rem,
   SegmentedControl,
   Select,
@@ -13,7 +11,7 @@ import {
   TableTd,
   TableTh,
   TableThead,
-  TextInput,
+  TextInput
 } from "@mantine/core"
 import { Calendar } from "@mantine/dates"
 import { IconTriangleInvertedFilled } from "@tabler/icons-react"

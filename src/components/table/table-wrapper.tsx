@@ -1,4 +1,5 @@
 import { TableSuccessResponse } from "@/@types"
+import { generateTableFilters } from "@/utils/generate-table-filters"
 import { Table, TableThead } from "@mantine/core"
 import { QueryKey, useQuery } from "@tanstack/react-query"
 import { useOptimisticSearchParams } from "nuqs/adapters/react-router/v7"
@@ -18,10 +19,15 @@ type TableWrapperProps<T extends Record<string, any>> = {
 const TableWrapper = <T extends Record<string, any>>(props: TableWrapperProps<T>) => {
   // Note: this is read-only, but reactive to all URL changes
   const searchParams = useOptimisticSearchParams()
+  const page = searchParams.get("page")
+  const stringTableFilters = searchParams.get("tableFilters")
+
+  const { searchParams: tableSearchParams } = generateTableFilters(stringTableFilters)
+  tableSearchParams.append("page", page || "")
 
   const { data, status, error } = useQuery({
-    queryKey: [...props.queryKey, searchParams.toString()],
-    queryFn: async () => await props.queryFun(searchParams),
+    queryKey: [...props.queryKey, tableSearchParams.toString()],
+    queryFn: async () => await props.queryFun(tableSearchParams),
   })
 
   if (status === "pending") return <Loader />

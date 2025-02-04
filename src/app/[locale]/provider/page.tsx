@@ -5,8 +5,10 @@ import { Divider, Group, Paper, Stack, Text } from "@mantine/core"
 import { useTranslation } from "react-i18next"
 
 import DateRangeInput from "@/components/ui/date-range-input"
+import FiltersWrapper from "@/components/common/filters-wrapper"
 
 import BookingTable from "./_components/bookings-table"
+import Filters from "./_components/filters"
 
 const dummyData = [
   { x: "2023-04-01", y: 120 },
@@ -28,12 +30,11 @@ const dummyData = [
   { x: "2023-05-12", y: 178 },
 ]
 
-
 const Home = () => {
   const { t } = useTranslation()
 
   return (
-    <Stack >
+    <Stack>
       <Paper component={Stack} gap={"lg"} p="lg" className="grow" radius="md">
         <Group justify="space-between" py="xs">
           <Text size="lg" fw={600}>

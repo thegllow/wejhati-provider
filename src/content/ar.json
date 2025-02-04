@@ -4,7 +4,18 @@
     "id": "المعرف",
     "search": "ابحث هنا",
     "date-range-input-placeholder": "اختر فترة زمنية",
-    "date": "تاريخ"
+    "date": "تاريخ",
+    "filter": "فلترة",
+    "trip-type": "نوع الرحلة",
+    "departure": "محطة المغادرة",
+    "arrival": "محطة الوصول",
+    "clear-filter": "حذف الفلترة",
+    "Apply": "تطبيق",
+    "trip-types": {
+      "all": "الجميع",
+      "oneWay": "ذهاب فقط",
+      "Round": "ذهاب وعودة"
+    }
   },
   "header": {
     "add-reservation": "حجز جديد",

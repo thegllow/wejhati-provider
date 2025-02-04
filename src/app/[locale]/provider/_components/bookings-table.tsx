@@ -1,8 +1,11 @@
 import { TableSuccessResponse } from "@/@types"
-import { Badge, Group, Space, Stack, Table, TableTh, TableTr, Text } from "@mantine/core"
+import { Badge, Group, Paper, Space, Stack, Table, TableTh, TableTr, Text } from "@mantine/core"
 import { useTranslation } from "react-i18next"
 
+import FiltersWrapper from "@/components/common/filters-wrapper"
 import TableWrapper from "@/components/table/table-wrapper"
+
+import Filters from "./filters"
 
 const tableData = [
   {
@@ -99,10 +102,13 @@ const BookingTable = () => {
   return (
     <Stack>
       <Space />
-      <Group>
+      <Group justify="space-between">
         <Text size="sm" c={"text"}>
           {t("home.passengers-table.title")}
         </Text>
+        <FiltersWrapper>
+          <Filters />
+        </FiltersWrapper>
       </Group>
       <TableWrapper
         queryFun={queryFn}

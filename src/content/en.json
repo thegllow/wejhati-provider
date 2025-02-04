@@ -4,7 +4,18 @@
     "id": "ID",
     "search": "Search",
     "date-range-input-placeholder": "Choose Dates",
-    "date": "date"
+    "date": "date",
+    "filter": "Filter",
+    "trip-type": "Trip Type",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "clear-filter": "Clear Filter",
+    "Apply": "Apply",
+    "trip-types": {
+      "all": "All",
+      "oneWay": "OneWay",
+      "Round": "Round"
+    }
   },
   "header": {
     "add-reservation": "Add Reservation",

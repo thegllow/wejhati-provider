@@ -4,6 +4,8 @@ import {
   createTheme,
   Input,
   Menu,
+  Radio,
+  RadioGroup,
   rem,
   SegmentedControl,
   Select,
@@ -11,7 +13,7 @@ import {
   TableTd,
   TableTh,
   TableThead,
-  TextInput
+  TextInput,
 } from "@mantine/core"
 import { Calendar } from "@mantine/dates"
 import { IconTriangleInvertedFilled } from "@tabler/icons-react"
@@ -53,30 +55,27 @@ const gray = [
   "#575757",
 ] as const
 
-
-const text = 
-  [
-    "#faf4ec",
-    "#eae7e3",
-    "#d0cecb",
-    "#b5b3af",
-    "#9e9c97",
-    "#908d88",
-    "#8a867f",
-    "#77736b",
-    "#6b665d",
-    "#5e574b"
-  ] as const
-
+const text = [
+  "#faf4ec",
+  "#eae7e3",
+  "#d0cecb",
+  "#b5b3af",
+  "#9e9c97",
+  "#908d88",
+  "#8a867f",
+  "#77736b",
+  "#6b665d",
+  "#5e574b",
+] as const
 
 export const theme = createTheme({
-  black: "#151C28",
+  black: "#2B261E",
 
   colors: {
     primary,
     secondary,
     gray,
-    text
+    text,
   },
 
   fontFamily: "Inter, serf",
@@ -84,7 +83,7 @@ export const theme = createTheme({
   primaryColor: "primary",
   radius: {
     sm: "0.35rem",
-    md: "0.65rem",
+    md: "0.55rem",
     lg: "1rem",
     xl: "2rem",
   },
@@ -95,7 +94,7 @@ export const theme = createTheme({
         color: "primary",
         highlightOnHover: true,
         verticalSpacing: "md",
-        borderColor:"#EAECF0"
+        borderColor: "#EAECF0",
       },
     }),
     TableThead: TableThead.extend({
@@ -118,11 +117,10 @@ export const theme = createTheme({
         size: "lg",
         radius: "xl",
         fw: 600,
-        variant:'light',
-        style:{
-          textTransform:'capitalize'
-        }
-        
+        variant: "light",
+        style: {
+          textTransform: "capitalize",
+        },
       },
     }),
     Menu: Menu.extend({
@@ -145,14 +143,11 @@ export const theme = createTheme({
       defaultProps: {
         size: "md",
         fw: 500,
-        rightSection: <IconTriangleInvertedFilled z={-1} size={12} color={primary[7]} />,
-
-        styles(theme) {
-          return {
-            input: {
-              color: theme.colors.primary[7],
-            },
-          }
+        rightSection: <IconTriangleInvertedFilled size={12} />,
+        labelProps: {
+          style: {
+            fontSize: "14px",
+          },
         },
       },
     }),
@@ -190,7 +185,21 @@ export const theme = createTheme({
         },
       },
     }),
+    RadioGroup: RadioGroup.extend({
+      defaultProps: {
+        labelProps: {
+          fw: 500,
+        },
+      },
+    }),
+    Radio: Radio.extend({
+      defaultProps: {
+        fw: 600,
+        c: "#817C74",
+      },
+    }),
   },
+
   defaultRadius: "md",
   fontSizes: {
     xs: rem(11),

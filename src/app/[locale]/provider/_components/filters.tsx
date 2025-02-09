@@ -2,7 +2,6 @@ import { TRIP_TYPE } from "@/config"
 import { Button, Divider, Group, Radio, Select, SimpleGrid, Stack } from "@mantine/core"
 import { useForm, zodResolver } from "@mantine/form"
 import { parseAsJson, useQueryState } from "nuqs"
-import { useOptimisticSearchParams } from "nuqs/adapters/react-router/v7"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
 

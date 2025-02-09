@@ -1,5 +1,5 @@
 import { TableSuccessResponse } from "@/@types"
-import { Badge, Group, Paper, Space, Stack, Table, TableTh, TableTr, Text } from "@mantine/core"
+import { Badge, Group, Space, Stack, Table, TableTh, TableTr, Text } from "@mantine/core"
 import { useTranslation } from "react-i18next"
 
 import FiltersWrapper from "@/components/common/filters-wrapper"
